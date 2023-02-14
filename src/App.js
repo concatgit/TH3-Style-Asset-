@@ -1,23 +1,35 @@
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Login</h1>
+      <form>
+        <p className={styles.fieldTitle}>nhập email:</p>
+        <input
+          name="email"
+          type="text"
+          className={styles.input}
+        />
+        <p>nhập password:</p>
+        <input
+          name="password"
+          type="password"
+          className={styles.input}
+        />
+        <br />
+        <label>
+          <input
+           className={styles.checkbox}
+            name="isRead"
+            type="checkbox" />I read and accept the privacy policy:
+        </label>
+
+        <p>bấm submit form</p>
+        <button className={styles.btnSubmit}>submit nè</button>
+      </form>
     </div>
   );
 }
